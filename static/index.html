@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Dorking Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="c">
+<h1>🔍 Google Dorking Tool</h1>
+<p class="sub">Linux / Termux — خادم محلي</p>
+<label>النطاق</label>
+<input id="site" placeholder="example.com" autocomplete="off">
+<label>التصنيف</label>
+<select id="cat"><option value="">— بدون تصنيف —</option></select>
+<div class="row">
+  <div><label>filetype</label><input id="ft" placeholder="pdf"></div>
+  <div><label>intitle</label><input id="it" placeholder="admin"></div>
+</div>
+<div class="row">
+  <div><label>inurl</label><input id="iu" placeholder="login"></div>
+  <div><label>intext</label><input id="ix" placeholder="password"></div>
+</div>
+<label>استثناء (مسافات)</label>
+<input id="ex" placeholder="forum blog">
+<label>استعلام إضافي</label>
+<input id="cu">
+<label>محرك البحث</label>
+<select id="eng">
+  <option value="google">Google</option>
+  <option value="bing">Bing</option>
+  <option value="duckduckgo">DuckDuckGo</option>
+  <option value="startpage">Startpage</option>
+  <option value="brave">Brave</option>
+</select>
+<button class="g" id="gen">توليد</button>
+<div class="row">
+  <button class="n" id="clr">مسح</button>
+  <button class="n" id="dm">داكن</button>
+</div>
+<p id="msg"></p>
+<section id="res" hidden>
+  <strong>الاستعلام:</strong>
+  <code id="q"></code>
+  <div class="row">
+    <button class="n" id="cp">نسخ</button>
+    <a id="go" class="b o" href="#" target="_blank" rel="noopener">فتح</a>
+  </div>
+</section>
+<section id="hist" hidden>
+  <div class="hist-head">
+    <label>السجل</label>
+    <div>
+      <button class="mini" id="expj">JSON</button>
+      <button class="mini" id="expc">CSV</button>
+      <button class="mini" id="hc">مسح</button>
+    </div>
+  </div>
+  <div id="hl"></div>
+</section>
+<p class="note">افحص فقط نطاقات تملكها أو لديك تصريح بفحصها.</p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

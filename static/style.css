@@ -1,0 +1,25 @@
+:root{--bg:#f4f4f9;--card:#fff;--tx:#222;--sub:#555;--bd:#ccc;--res:#e8f0fe;--pri:#4285F4;--ok:#188038}
+body.dark{--bg:#121418;--card:#1c1f26;--tx:#eee;--sub:#aaa;--bd:#444;--res:#232a3a}
+*{box-sizing:border-box}
+body{font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--tx);margin:0;padding:16px}
+.c{max-width:680px;margin:12px auto;background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 22px #0002}
+h1{text-align:center;color:var(--pri);font-size:24px;margin:0}
+.sub{text-align:center;color:var(--sub);font-size:13px;margin:6px 0 16px}
+label{display:block;margin-top:14px;font-weight:600;font-size:14px}
+input,select{width:100%;padding:12px;margin-top:6px;border:1px solid var(--bd);border-radius:8px;font-size:15px;background:var(--card);color:var(--tx);font-family:inherit}
+button,a.b{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border:0;border-radius:8px;font-size:15px;cursor:pointer;text-decoration:none;color:#fff;font-family:inherit}
+.g{background:var(--pri);width:100%;margin-top:16px;font-weight:600}
+.o{background:var(--ok);flex:1}
+.n{background:#666;flex:1}
+.mini{padding:5px 10px;font-size:12px;background:#666;border-radius:6px}
+.row{display:flex;gap:10px;margin-top:10px}
+.row>div{flex:1}
+.row>button,.row>a{flex:1}
+#res{margin-top:20px;padding:14px;background:var(--res);border-radius:10px}
+#q{display:block;direction:ltr;text-align:left;margin-top:8px;padding:12px;background:var(--card);border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font-family:monospace;font-size:13px;border:1px solid var(--bd)}
+#msg{color:#b3261e;margin:10px 0;font-size:14px;min-height:18px}
+.hist-head{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.hist-head>div{display:flex;gap:6px}
+.h{direction:ltr;text-align:left;padding:9px;margin-top:6px;background:var(--res);border-radius:8px;cursor:pointer;font-size:13px;overflow-wrap:anywhere;font-family:monospace}
+.h:hover{outline:2px solid var(--pri)}
+.note{margin-top:18px;font-size:12px;line-height:1.8;color:var(--sub)}

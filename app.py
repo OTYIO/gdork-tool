@@ -51,7 +51,8 @@ class H(BaseHTTPRequestHandler):
         self.send_header("Content-Length",str(len(b)))
         self.send_header("Cache-Control","no-store")
         self.end_headers()
-        self.wfile.write(b)
+        try: self.wfile.write(b)
+        except (BrokenPipeError, ConnectionResetError): pass
     def _j(self,c,o): self._s(c,json.dumps(o,ensure_ascii=False),"application/json; charset=utf-8")
     def _f(self,p):
         p="/index.html" if p in("","/") else p
@@ -93,8 +94,11 @@ class H(BaseHTTPRequestHandler):
         else:
             self._j(404,{"error":"not found"})
 
+class Q(HTTPServer):
+    def handle_error(self,request,client_address): pass
+
 def main():
-    s=HTTPServer((HOST,PORT),H)
+    s=Q((HOST,PORT),H)
     url=f"http://{HOST}:{PORT}/"
     print(f"[+] {url}")
     print("[+] Ctrl+C للإيقاف")
